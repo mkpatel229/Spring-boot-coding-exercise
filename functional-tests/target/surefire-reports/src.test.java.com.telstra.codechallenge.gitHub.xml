@@ -1,0 +1,54 @@
+<testsuite failures="0" name="src/test/java/com/telstra/codechallenge/gitHub.feature" skipped="0" tests="3" time="2.361955">
+  <testcase classname="src.test.java.com.telstra.codechallenge.gitHub" name="Get 2 Users with zero follower" time="0.932465">
+    <system-out>Given url microserviceUrl ................................................. passed
+And path 'gitHub/zeroFollowerUser' ........................................ passed
+And param per_page = 2 .................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match header Content-Type contains 'application/json' ................. passed
+* def gitSchema = {"id": '#number',"login": '#string',"html_url": '#string'} . passed
+And match response == {"items": '#[2](gitSchema)'} ........................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.telstra.codechallenge.gitHub" name="Get default(10) number of Users with zero follower" time="0.559019">
+    <system-out>Given url microserviceUrl ................................................. passed
+And path 'gitHub/zeroFollowerUser' ........................................ passed
+And param per_page = 2 .................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match header Content-Type contains 'application/json' ................. passed
+* def gitSchema = {"id": '#number',"login": '#string',"html_url": '#string'} . passed
+And match response == {"items": '#[2](gitSchema)'} ........................ passed
+Given url microserviceUrl ................................................. passed
+And path 'gitHub/zeroFollowerUser' ........................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match header Content-Type contains 'application/json' ................. passed
+* def gitSchema = {"id": '#number',"login": '#string',"html_url": '#string'} . passed
+And match response == {"items": '#[10](gitSchema)'} ....................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.telstra.codechallenge.gitHub" name="Get 100 Users with zero follower" time="0.870471">
+    <system-out>Given url microserviceUrl ................................................. passed
+And path 'gitHub/zeroFollowerUser' ........................................ passed
+And param per_page = 2 .................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match header Content-Type contains 'application/json' ................. passed
+* def gitSchema = {"id": '#number',"login": '#string',"html_url": '#string'} . passed
+And match response == {"items": '#[2](gitSchema)'} ........................ passed
+Given url microserviceUrl ................................................. passed
+And path 'gitHub/zeroFollowerUser' ........................................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match header Content-Type contains 'application/json' ................. passed
+* def gitSchema = {"id": '#number',"login": '#string',"html_url": '#string'} . passed
+And match response == {"items": '#[10](gitSchema)'} ....................... passed
+Given url microserviceUrl ................................................. passed
+And path 'gitHub/zeroFollowerUser' ........................................ passed
+And param per_page = 100 .................................................. passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match header Content-Type contains 'application/json' ................. passed
+* def gitSchema = {"id": '#number',"login": '#string',"html_url": '#string'} . passed
+And match response == {"items": '#[100](gitSchema)'} ...................... passed</system-out>
+  </testcase>
+</testsuite>

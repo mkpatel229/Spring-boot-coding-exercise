@@ -1,0 +1,15 @@
+<testsuite failures="1" name="src/test/java/com/telstra/codechallenge/helloworld.feature" skipped="0" tests="1" time="0.423236">
+  <testcase classname="src.test.java.com.telstra.codechallenge.helloworld" name="Is the hello uri available and functioning" time="0.423236">
+    <failure message="helloworld.feature:10 - status code was: 404, expected: 200, response time: 94, url: http://localhost:9090/hello, response: &lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 404 – Not Found&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 – Not Found&lt;/h1&gt;&lt;hr class=&quot;line&quot; /&gt;&lt;p&gt;&lt;b&gt;Type&lt;/b&gt; Status Report&lt;/p&gt;&lt;p&gt;&lt;b&gt;Message&lt;/b&gt; &amp;#47;hello&lt;/p&gt;&lt;p&gt;&lt;b&gt;Description&lt;/b&gt; The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.&lt;/p&gt;&lt;hr class=&quot;line&quot; /&gt;&lt;h3&gt;Apache Tomcat/9.0.33&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;">Given url microserviceUrl ................................................. passed
+And path '/hello' ......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: helloworld.feature:10 - status code was: 404, expected: 200, response time: 94, url: http://localhost:9090/hello, response: &lt;!doctype html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;title&gt;HTTP Status 404 – Not Found&lt;/title&gt;&lt;style type="text/css"&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 – Not Found&lt;/h1&gt;&lt;hr class="line" /&gt;&lt;p&gt;&lt;b&gt;Type&lt;/b&gt; Status Report&lt;/p&gt;&lt;p&gt;&lt;b&gt;Message&lt;/b&gt; &amp;#47;hello&lt;/p&gt;&lt;p&gt;&lt;b&gt;Description&lt;/b&gt; The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.&lt;/p&gt;&lt;hr class="line" /&gt;&lt;h3&gt;Apache Tomcat/9.0.33&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;&#13;
+	at ✽.Then status 200 (helloworld.feature:10)&#13;
+
+And match header Content-Type contains 'application/json' ................. skipped
+And match response == ..................................................... skipped</failure>
+  </testcase>
+</testsuite>

@@ -9,12 +9,8 @@ public class FunctionalIT {
   }
 
   @Karate.Test
-  Karate testUser() {
-    return Karate.run("user").relativeTo(getClass());
+  Karate testGitHub() {
+    return Karate.run("gitHub").relativeTo(getClass());
   }
 
-  @Karate.Test
-  Karate testRepository() {
-    return Karate.run("repository").relativeTo(getClass());
-  }
 }

@@ -1,0 +1,109 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: gitHubController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.telstra.codechallenge.gitHubSearch.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: gitHubController (com.telstra.codechallenge.gitHubSearch.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">gitHubController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.telstra.codechallenge.gitHubSearch.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;
+<i>4</i>&nbsp;import com.telstra.codechallenge.gitHubSearch.DTO.GitHubUserResponse;
+<i>5</i>&nbsp;import com.telstra.codechallenge.gitHubSearch.service.GitHubService;
+<i>6</i>&nbsp;import com.telstra.codechallenge.gitHubSearch.model.GitHubUser;
+<i>7</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>8</i>&nbsp;import org.springframework.http.ResponseEntity;
+<i>9</i>&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+<i>10</i>&nbsp;import org.springframework.web.bind.annotation.RequestMethod;
+<i>11</i>&nbsp;import org.springframework.web.bind.annotation.RequestParam;
+<i>12</i>&nbsp;import org.springframework.web.bind.annotation.RestController;
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;import java.util.List;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;@RestController
+<b class="fc"><i>17</i>&nbsp;public class gitHubController {</b>
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    @Autowired
+<i>20</i>&nbsp;    private GitHubService gitHubService;
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;    @RequestMapping(path = &quot;/gitHub/zeroFollowerUser&quot;, method = RequestMethod.GET)
+<i>23</i>&nbsp;    public ResponseEntity&lt;GitHubUserResponse&gt; getGitHubUsers(@RequestParam(value = &quot;per_page&quot;, defaultValue = &quot;10&quot;) String per_page){
+<b class="fc"><i>24</i>&nbsp;        return ResponseEntity.ok(gitHubService.getUsers(per_page));</b>
+<i>25</i>&nbsp;    }
+<i>26</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-06-12 12:05</div>
+</div>
+</body>
+</html>
